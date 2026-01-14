@@ -17,6 +17,6 @@ jobs:
            host : ${{ secrets.MY_HOST }}
            username : ubuntu
            key : ${{ secrets.MY_KEY }}
-           source : "my.html"
+           source : "01_web.html"
            target : "/var/www/html/"
     
