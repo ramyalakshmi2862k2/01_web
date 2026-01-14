@@ -1,0 +1,22 @@
+name : deploy html to aws
+on :
+   push:
+      branches:
+         - main
+
+jobs:
+   deploy :
+     runs-on : ubuntu-latest
+     steps :
+       - name : checkout repository
+         uses : actions/checkout@v4
+
+       - name : copy html file to ec2 
+         uses : appleboy/scp-actions@v0.1.7
+         with :
+           host : ${{ secrets.MY_HOST }}
+           username : ubuntu
+           key : ${{ secrets.MY_KEY }}
+           source : "my.html"
+           target : "/var/www/html/"
+    
