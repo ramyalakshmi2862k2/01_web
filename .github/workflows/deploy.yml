@@ -12,7 +12,7 @@ jobs:
          uses : actions/checkout@v4
 
        - name : copy html file to ec2 
-         uses : appleboy/scp-actions@v0.1.7
+         uses : appleboy/scp-action@v0.1.7
          with :
            host : ${{ secrets.MY_HOST }}
            username : ubuntu
