@@ -10,8 +10,11 @@ jobs:
      steps :
        - name : checkout repository
          uses : actions/checkout@v4
-         run  : cd $GITHUB_WORKSPACE
 
+       - name : run path
+         run  : |
+                cd $GITHUB_WORKSPACE
+                pwd
        - name : copy html file to ec2 
          uses : appleboy/scp-action@v0.1.7
          with :
