@@ -13,7 +13,6 @@ jobs:
 
        - name : run path
          run  : |
-                cd $GITHUB_WORKSPACE
                 pwd
        - name : copy html file to ec2 
          uses : appleboy/scp-action@v0.1.7
