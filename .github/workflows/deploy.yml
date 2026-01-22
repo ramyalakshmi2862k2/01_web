@@ -10,6 +10,13 @@ jobs:
      steps :
        - name : checkout repository
          uses : actions/checkout@v4
+         
+       - name: Show paths
+         run: |
+             echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+             echo "RUNNER_TEMP=$RUNNER_TEMP"
+             echo "RUNNER_TOOL_CACHE=$RUNNER_TOOL_CACHE"
+
 
        - name : run path
          run  : |
